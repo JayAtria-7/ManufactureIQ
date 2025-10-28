@@ -693,25 +693,27 @@ st.markdown("<br><br>", unsafe_allow_html=True)
 st.markdown("""
     <style>
     .footer {
-        background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-        border-top: 2px solid #e2e8f0;
-        padding: 2rem 1rem;
+        background: #ffffff;
+        border-top: 1px solid #e5e7eb;
+        padding: 1.5rem 1rem;
         margin-top: 3rem;
     }
     .footer-content {
         max-width: 1200px;
         margin: 0 auto;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        gap: 1.5rem;
+        justify-content: space-between;
+        gap: 2rem;
     }
     .footer-made-with {
         display: flex;
         align-items: center;
-        gap: 0.5rem;
-        color: #64748b;
+        gap: 0.4rem;
+        color: #6b7280;
         font-size: 0.9rem;
+        white-space: nowrap;
     }
     .footer-heart {
         color: #ef4444;
@@ -719,95 +721,86 @@ st.markdown("""
     }
     @keyframes heartbeat {
         0%, 100% { transform: scale(1); }
-        50% { transform: scale(1.1); }
+        50% { transform: scale(1.15); }
     }
     .footer-author {
-        font-weight: 700;
-        color: #1e3a8a;
-        font-size: 1rem;
+        font-weight: 600;
+        color: #111827;
     }
     .footer-social {
         display: flex;
-        gap: 1rem;
+        gap: 0.75rem;
         justify-content: center;
-        flex-wrap: wrap;
+        align-items: center;
     }
     .social-link {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        width: 40px;
-        height: 40px;
-        background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
-        border-radius: 10px;
-        color: #64748b;
+        width: 36px;
+        height: 36px;
+        background: #f3f4f6;
+        border-radius: 8px;
+        color: #6b7280;
         text-decoration: none;
         transition: all 0.3s ease;
-        font-size: 1.2rem;
     }
     .social-link:hover {
-        background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+        background: #3b82f6;
         color: white;
-        transform: translateY(-3px);
-        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
     }
     .footer-copyright {
-        color: #64748b;
+        color: #6b7280;
         font-size: 0.85rem;
-        text-align: center;
+        text-align: right;
+        white-space: nowrap;
     }
-    .footer-divider {
-        width: 100%;
-        height: 1px;
-        background: linear-gradient(to right, transparent, #e2e8f0, transparent);
-        margin: 1rem 0;
+    @media (max-width: 768px) {
+        .footer-content {
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .footer-copyright {
+            text-align: center;
+        }
     }
     </style>
     
     <div class="footer">
         <div class="footer-content">
-            <div style="text-align: center;">
-                <div class="footer-made-with">
-                    <span>Made with</span>
-                    <span class="footer-heart">❤️</span>
-                    <span>for Manufacturing Optimization</span>
-                </div>
-                <div class="footer-author">by Jay Prakash Kumar</div>
+            <div class="footer-made-with">
+                <span>Made with</span>
+                <span class="footer-heart">❤️</span>
+                <span>for Manufacturing Optimization</span>
+                <span class="footer-author">by Jay Prakash Kumar</span>
             </div>
-            
-            <div class="footer-divider"></div>
             
             <div class="footer-social">
                 <a href="https://github.com/JayAtria-7" target="_blank" rel="noopener noreferrer" 
-                   class="social-link" title="GitHub - JayAtria-7">
-                    <span style="font-size: 1.5rem;">💻</span>
+                   class="social-link" title="GitHub">
+                    <span style="font-size: 1.3rem;">�</span>
                 </a>
                 
                 <a href="https://www.linkedin.com/in/jay-prakash-kumar-1b534a260" target="_blank" rel="noopener noreferrer" 
-                   class="social-link" title="LinkedIn - Jay Prakash Kumar">
-                    <span style="font-size: 1.5rem;">👔</span>
+                   class="social-link" title="LinkedIn">
+                    <span style="font-size: 1.3rem;">�</span>
                 </a>
                 
                 <a href="https://leetcode.com/u/JayAtria_7/" target="_blank" rel="noopener noreferrer" 
-                   class="social-link" title="LeetCode - JayAtria_7">
-                    <span style="font-size: 1.5rem;">💡</span>
+                   class="social-link" title="LeetCode">
+                    <span style="font-size: 1.3rem;">⚡</span>
                 </a>
                 
                 <a href="mailto:jay.prakash7.kr@gmail.com" 
-                   class="social-link" title="Email - jay.prakash7.kr@gmail.com">
-                    <span style="font-size: 1.5rem;">📧</span>
+                   class="social-link" title="Email">
+                    <span style="font-size: 1.3rem;">✉️</span>
                 </a>
             </div>
             
-            <div class="footer-divider"></div>
-            
             <div class="footer-copyright">
-                <div style="margin-bottom: 0.5rem;">
-                    <strong>ManufactureIQ</strong> v2.0.0 Enterprise | © 2025 All Rights Reserved
-                </div>
-                <div style="font-size: 0.8rem; color: #94a3b8;">
-                    Powered by Advanced Machine Learning & AI
-                </div>
+                © 2025 All rights reserved.
             </div>
         </div>
     </div>
