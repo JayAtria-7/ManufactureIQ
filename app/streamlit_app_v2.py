@@ -1,5 +1,5 @@
 """
-SmartManufacture AI - Enterprise Manufacturing Output Predictor
+ManufactureIQ - Enterprise Manufacturing Output Predictor
 Professional Web Interface for Production Optimization
 """
 
@@ -16,14 +16,14 @@ from datetime import datetime
 
 # Page Configuration
 st.set_page_config(
-    page_title="SmartManufacture AI | Output Predictor",
+    page_title="ManufactureIQ | AI-Powered Output Predictor",
     page_icon="🏭",
     layout="wide",
     initial_sidebar_state="expanded",
     menu_items={
-        'Get Help': 'https://smartmanufacture.ai/support',
-        'Report a bug': 'https://smartmanufacture.ai/bugs',
-        'About': "# SmartManufacture AI v2.0\nEnterprise Manufacturing Output Prediction System"
+        'Get Help': 'https://github.com/JayAtria-7/ManufactureIQ',
+        'Report a bug': 'https://github.com/JayAtria-7/ManufactureIQ/issues',
+        'About': "# ManufactureIQ v2.0\nEnterprise Manufacturing Output Prediction System\nPowered by AI & Machine Learning"
     }
 )
 
@@ -320,8 +320,11 @@ if error:
 # Corporate Header with Branding
 st.markdown("""
     <div class="company-header">
-        <div class="company-logo">🏭 SmartManufacture AI</div>
-        <div class="company-tagline">Advanced Predictive Analytics for Manufacturing Excellence</div>
+        <div class="company-logo">
+            <span style="font-size: 2rem;">🏭</span>
+            <span style="margin-left: 0.5rem; background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800;">ManufactureIQ</span>
+        </div>
+        <div class="company-tagline">AI-Powered Predictive Analytics for Manufacturing Excellence</div>
     </div>
 """, unsafe_allow_html=True)
 
@@ -367,7 +370,7 @@ with st.sidebar:
     st.markdown("""
         <div style="text-align: center; padding: 1.5rem 0; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); border-radius: 10px; margin-bottom: 1.5rem;">
             <div style="font-size: 2.5rem;">🏭</div>
-            <div style="color: white; font-weight: 700; font-size: 1.2rem; margin-top: 0.5rem;">SmartManufacture AI</div>
+            <div style="color: white; font-weight: 700; font-size: 1.2rem; margin-top: 0.5rem;">ManufactureIQ</div>
             <div style="color: #e0f2fe; font-size: 0.85rem; margin-top: 0.25rem;">v2.0.0 Enterprise</div>
         </div>
     """, unsafe_allow_html=True)
@@ -406,11 +409,11 @@ with st.sidebar:
     st.markdown("### 📞 Support")
     st.markdown("""
     **Technical Support:**  
-    📧 support@smartmanufacture.ai  
-    📱 +1 (800) 555-0123  
+    📧 jay.prakash7.kr@gmail.com  
+    🌐 GitHub: [ManufactureIQ](https://github.com/JayAtria-7/ManufactureIQ)  
     
-    **Business Hours:**  
-    Mon-Fri: 9AM - 6PM EST
+    **Developer:**  
+    Jay Prakash Kumar
     """)
     
     st.markdown("---")
@@ -680,11 +683,11 @@ with tab4:
         </div>
         
         <div class="info-card" style="margin-top: 1rem;">
-            <h3 style="color: #1e3a8a;">About SmartManufacture AI</h3>
+            <h3 style="color: #1e3a8a;">About ManufactureIQ</h3>
             <p style="color: #64748b;">
-            SmartManufacture AI is an enterprise-grade predictive analytics platform designed to optimize 
+            ManufactureIQ is an AI-powered predictive analytics platform designed to optimize 
             manufacturing operations. Our machine learning models analyze multiple parameters to provide 
-            accurate production forecasts and actionable insights.
+            accurate production forecasts and actionable insights for data-driven decision making.
             </p>
         </div>
     """, unsafe_allow_html=True)
