@@ -4,6 +4,7 @@ Professional Web Interface for Production Optimization
 """
 
 import streamlit as st
+import streamlit.components.v1 as components
 import pandas as pd
 import numpy as np
 import joblib
@@ -691,14 +692,14 @@ with tab4:
 # Professional Footer with Social Links
 st.markdown("<br><br>", unsafe_allow_html=True)
 
-# Footer HTML
-footer_html = """
+# Footer HTML using components for proper rendering
+components.html("""
 <style>
 .footer {
     background: #ffffff;
     border-top: 1px solid #e5e7eb;
     padding: 1.5rem 1rem;
-    margin-top: 3rem;
+    margin-top: 0;
 }
 .footer-content {
     max-width: 1200px;
@@ -807,6 +808,4 @@ footer_html = """
         </div>
     </div>
 </div>
-"""
-
-st.markdown(footer_html, unsafe_allow_html=True)
+""", height=100)
