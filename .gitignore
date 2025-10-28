@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# VS Code
+.vscode/
+
+# Data files (too large for GitHub)
+*.csv
+
+# Model files (keep these - needed for deployment)
+# models/*.pkl  # Don't ignore - needed for Streamlit Cloud
+
+# OS files
+.DS_Store
+Thumbs.db
+~$*
+
+# Docker
+*.log
+
+# Temp files
+*.tmp
+*.bak

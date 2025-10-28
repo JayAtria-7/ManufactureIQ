@@ -1,0 +1,30 @@
+{
+  "train_metrics": {
+    "r2": 0.868545837719726,
+    "mse": 19.105458392666964,
+    "rmse": 4.370979111442534,
+    "mae": 3.2935954104758465
+  },
+  "test_metrics": {
+    "r2": 0.8585056009417786,
+    "mse": 18.46400735677103,
+    "rmse": 4.296976536679137,
+    "mae": 3.395227402135609
+  },
+  "feature_list": [
+    "Injection_Temperature",
+    "Injection_Pressure",
+    "Cycle_Time",
+    "Cooling_Time",
+    "Material_Viscosity",
+    "Ambient_Temperature",
+    "Machine_Age",
+    "Operator_Experience",
+    "Maintenance_Hours",
+    "Temperature_Pressure_Ratio",
+    "Total_Cycle_Time",
+    "hour",
+    "is_weekend"
+  ],
+  "random_state": 42
+}
