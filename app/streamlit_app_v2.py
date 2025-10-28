@@ -744,6 +744,7 @@ st.markdown("""
         color: #6b7280;
         text-decoration: none;
         transition: all 0.3s ease;
+        font-size: 1.2rem;
     }
     .social-link:hover {
         background: #3b82f6;
@@ -780,22 +781,22 @@ st.markdown("""
             <div class="footer-social">
                 <a href="https://github.com/JayAtria-7" target="_blank" rel="noopener noreferrer" 
                    class="social-link" title="GitHub">
-                    <span style="font-size: 1.3rem;">�</span>
+                    <span>&#128279;</span>
                 </a>
                 
                 <a href="https://www.linkedin.com/in/jay-prakash-kumar-1b534a260" target="_blank" rel="noopener noreferrer" 
                    class="social-link" title="LinkedIn">
-                    <span style="font-size: 1.3rem;">�</span>
+                    <span>&#128188;</span>
                 </a>
                 
                 <a href="https://leetcode.com/u/JayAtria_7/" target="_blank" rel="noopener noreferrer" 
                    class="social-link" title="LeetCode">
-                    <span style="font-size: 1.3rem;">⚡</span>
+                    <span>&#9889;</span>
                 </a>
                 
                 <a href="mailto:jay.prakash7.kr@gmail.com" 
                    class="social-link" title="Email">
-                    <span style="font-size: 1.3rem;">✉️</span>
+                    <span>&#9993;</span>
                 </a>
             </div>
             
