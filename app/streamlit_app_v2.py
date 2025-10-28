@@ -690,119 +690,123 @@ with tab4:
 
 # Professional Footer with Social Links
 st.markdown("<br><br>", unsafe_allow_html=True)
-st.markdown("""
-    <style>
-    .footer {
-        background: #ffffff;
-        border-top: 1px solid #e5e7eb;
-        padding: 1.5rem 1rem;
-        margin-top: 3rem;
-    }
+
+# Footer HTML
+footer_html = """
+<style>
+.footer {
+    background: #ffffff;
+    border-top: 1px solid #e5e7eb;
+    padding: 1.5rem 1rem;
+    margin-top: 3rem;
+}
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.footer-made-with {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #6b7280;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+.footer-heart {
+    color: #ef4444;
+    animation: heartbeat 1.5s ease-in-out infinite;
+}
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
+.footer-author {
+    font-weight: 600;
+    color: #111827;
+}
+.footer-social {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    align-items: center;
+}
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: #f3f4f6;
+    border-radius: 8px;
+    color: #6b7280;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+.social-link:hover {
+    background: #3b82f6;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
+}
+.footer-copyright {
+    color: #6b7280;
+    font-size: 0.85rem;
+    text-align: right;
+    white-space: nowrap;
+}
+@media (max-width: 768px) {
     .footer-content {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        gap: 2rem;
-    }
-    .footer-made-with {
-        display: flex;
-        align-items: center;
-        gap: 0.4rem;
-        color: #6b7280;
-        font-size: 0.9rem;
-        white-space: nowrap;
-    }
-    .footer-heart {
-        color: #ef4444;
-        animation: heartbeat 1.5s ease-in-out infinite;
-    }
-    @keyframes heartbeat {
-        0%, 100% { transform: scale(1); }
-        50% { transform: scale(1.15); }
-    }
-    .footer-author {
-        font-weight: 600;
-        color: #111827;
-    }
-    .footer-social {
-        display: flex;
-        gap: 0.75rem;
-        justify-content: center;
-        align-items: center;
-    }
-    .social-link {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 36px;
-        height: 36px;
-        background: #f3f4f6;
-        border-radius: 8px;
-        color: #6b7280;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        font-size: 1.2rem;
-    }
-    .social-link:hover {
-        background: #3b82f6;
-        color: white;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
+        flex-direction: column;
+        gap: 1rem;
     }
     .footer-copyright {
-        color: #6b7280;
-        font-size: 0.85rem;
-        text-align: right;
-        white-space: nowrap;
+        text-align: center;
     }
-    @media (max-width: 768px) {
-        .footer-content {
-            flex-direction: column;
-            gap: 1rem;
-        }
-        .footer-copyright {
-            text-align: center;
-        }
-    }
-    </style>
-    
-    <div class="footer">
-        <div class="footer-content">
-            <div class="footer-made-with">
-                <span>Made with</span>
-                <span class="footer-heart">❤️</span>
-                <span>for Manufacturing Optimization</span>
-                <span class="footer-author">by Jay Prakash Kumar</span>
-            </div>
+}
+</style>
+
+<div class="footer">
+    <div class="footer-content">
+        <div class="footer-made-with">
+            <span>Made with</span>
+            <span class="footer-heart">❤️</span>
+            <span>for Manufacturing Optimization</span>
+            <span class="footer-author">by Jay Prakash Kumar</span>
+        </div>
+        
+        <div class="footer-social">
+            <a href="https://github.com/JayAtria-7" target="_blank" rel="noopener noreferrer" 
+               class="social-link" title="GitHub">
+                <span>🔗</span>
+            </a>
             
-            <div class="footer-social">
-                <a href="https://github.com/JayAtria-7" target="_blank" rel="noopener noreferrer" 
-                   class="social-link" title="GitHub">
-                    <span>&#128279;</span>
-                </a>
-                
-                <a href="https://www.linkedin.com/in/jay-prakash-kumar-1b534a260" target="_blank" rel="noopener noreferrer" 
-                   class="social-link" title="LinkedIn">
-                    <span>&#128188;</span>
-                </a>
-                
-                <a href="https://leetcode.com/u/JayAtria_7/" target="_blank" rel="noopener noreferrer" 
-                   class="social-link" title="LeetCode">
-                    <span>&#9889;</span>
-                </a>
-                
-                <a href="mailto:jay.prakash7.kr@gmail.com" 
-                   class="social-link" title="Email">
-                    <span>&#9993;</span>
-                </a>
-            </div>
+            <a href="https://www.linkedin.com/in/jay-prakash-kumar-1b534a260" target="_blank" rel="noopener noreferrer" 
+               class="social-link" title="LinkedIn">
+                <span>💼</span>
+            </a>
             
-            <div class="footer-copyright">
-                © 2025 All rights reserved.
-            </div>
+            <a href="https://leetcode.com/u/JayAtria_7/" target="_blank" rel="noopener noreferrer" 
+               class="social-link" title="LeetCode">
+                <span>⚡</span>
+            </a>
+            
+            <a href="mailto:jay.prakash7.kr@gmail.com" 
+               class="social-link" title="Email">
+                <span>✉️</span>
+            </a>
+        </div>
+        
+        <div class="footer-copyright">
+            © 2025 All rights reserved.
         </div>
     </div>
-""", unsafe_allow_html=True)
+</div>
+"""
+
+st.markdown(footer_html, unsafe_allow_html=True)
